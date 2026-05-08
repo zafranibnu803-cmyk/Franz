@@ -1,0 +1,438 @@
+<!DOCTYPE html><html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Franzz / Zafran</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:#0a0a0a;
+color:white;
+min-height:100vh;
+overflow-x:hidden;
+position:relative;
+padding:20px;
+}
+
+.stars{
+position:fixed;
+width:100%;
+height:100%;
+left:0;
+top:0;
+background-image:
+radial-gradient(white 1px, transparent 1px),
+radial-gradient(cyan 1px, transparent 1px);
+background-size:50px 50px, 100px 100px;
+opacity:0.3;
+z-index:-2;
+}
+
+.planet{
+position:fixed;
+border-radius:50%;
+filter:blur(1px);
+z-index:-1;
+}
+
+.planet1{
+width:180px;
+height:180px;
+background:radial-gradient(circle, cyan, #002233);
+top:-40px;
+right:-40px;
+box-shadow:0 0 50px cyan;
+}
+
+.planet2{
+width:120px;
+height:120px;
+background:radial-gradient(circle, #4455ff, #111133);
+bottom:-20px;
+left:-20px;
+box-shadow:0 0 40px #4455ff;
+}
+
+.container{
+max-width:520px;
+margin:auto;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+border-radius:25px;
+padding:25px;
+backdrop-filter:blur(10px);
+box-shadow:0 0 20px rgba(0,255,255,0.15);
+}
+
+.profile{
+display:flex;
+align-items:center;
+gap:20px;
+}
+
+.avatar{
+width:110px;
+height:110px;
+border-radius:50%;
+background:url('file_000000005a9c7207b16ab5cca284ba55') center/cover;
+box-shadow:0 0 25px cyan;
+}
+
+.name h1{
+font-size:2rem;
+}
+
+.name p{
+color:#aaa;
+margin-top:5px;
+}
+
+.stats{
+display:flex;
+justify-content:space-between;
+margin-top:30px;
+text-align:center;
+}
+
+.stats h2{
+font-size:1.5rem;
+}
+
+.stats span{
+color:#aaa;
+}
+
+.bio{
+margin-top:25px;
+line-height:1.8;
+}
+
+.bio h3{
+color:cyan;
+margin-bottom:10px;
+}
+
+.bio ul{
+padding-left:20px;
+margin-top:10px;
+}
+
+.bio li{
+margin-bottom:8px;
+}
+
+.buttons{
+display:flex;
+gap:10px;
+margin-top:25px;
+}
+
+.btn{
+flex:1;
+padding:14px;
+border:none;
+border-radius:15px;
+background:#111;
+color:white;
+cursor:pointer;
+font-weight:bold;
+transition:0.3s;
+border:1px solid rgba(255,255,255,0.1);
+}
+
+.btn:hover{
+background:cyan;
+color:black;
+transform:scale(1.03);
+}
+
+.game-card{
+margin-top:30px;
+background:#1a1a2e;
+padding:25px;
+border-radius:25px;
+box-shadow:0 0 20px rgba(0,0,0,0.4);
+}
+
+.game-title{
+text-align:center;
+margin-bottom:10px;
+font-size:2rem;
+}
+
+.subtitle{
+text-align:center;
+color:#aaa;
+margin-bottom:20px;
+}
+
+.mode-select{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+justify-content:center;
+margin-bottom:20px;
+}
+
+.mode-btn{
+padding:10px 18px;
+border:none;
+border-radius:50px;
+background:#333;
+color:white;
+cursor:pointer;
+font-weight:bold;
+}
+
+.btn-active{
+background:cyan;
+color:black;
+}
+
+.status{
+text-align:center;
+margin-bottom:20px;
+font-size:18px;
+font-weight:bold;
+}
+
+.board{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:12px;
+max-width:320px;
+margin:auto;
+}
+
+.cell{
+aspect-ratio:1;
+background:#16213e;
+border-radius:16px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:60px;
+font-weight:700;
+cursor:pointer;
+transition:0.2s;
+}
+
+.cell:hover{
+background:#1e2a5c;
+}
+
+.cell.x{
+color:#00ff9d;
+}
+
+.cell.o{
+color:#ff2d55;
+}
+
+.score-board{
+display:flex;
+justify-content:center;
+gap:15px;
+margin-top:25px;
+}
+
+.score-item{
+background:#16213e;
+padding:12px 20px;
+border-radius:12px;
+text-align:center;
+min-width:80px;
+}
+
+.footer{
+text-align:center;
+margin-top:25px;
+color:#777;
+font-size:0.9rem;
+}
+</style></head>
+<body><div class="stars"></div>
+<div class="planet planet1"></div>
+<div class="planet planet2"></div><div class="container"><div class="card">
+<div class="profile">
+<div class="avatar"></div><div class="name">
+<h1>Franzz / Zafran</h1>
+<p>Cyber Gamer • Student • Space Lover</p>
+</div>
+</div><div class="stats">
+<div>
+<h2>95+</h2>
+<span>Skill</span>
+</div><div>
+<h2>2026</h2>
+<span>Active</span>
+</div><div>
+<h2>∞</h2>
+<span>Idea</span>
+</div>
+</div><div class="bio">
+<h3>Siapa itu Zafran?</h3>
+<p>Dia adalah anak Indonesia yang tau akan hampir semua pelajaran di sekolah nya.</p><ul>
+<li>🎮 Bermain game</li>
+<li>🌌 Paham astronomy</li>
+<li>📚 Paham sejarah</li>
+<li>💻 Paham teknologi</li>
+<li>✨ Dan lain lain...</li>
+</ul>
+</div><div class="buttons">
+<button class="btn" onclick="window.location.href='https://tiktok.com/@franz.education'">Follow</button>
+<button class="btn" onclick="window.location.href='https://tiktok.com/@franz.education'">Message</button>
+</div>
+</div><div class="game-card">
+<h1 class="game-title">Tic Tac Toe</h1>
+<p class="subtitle">Mode 2 Pemain & vs Komputer AI</p><div class="mode-select">
+<button id="btn-pvp" class="mode-btn btn-active">2 Pemain</button>
+<button id="btn-pvc" class="mode-btn">vs Komputer</button>
+<button id="btn-reset" class="mode-btn">Reset</button>
+</div><div class="status" id="status">GILIRAN: <span id="current-player">X</span></div><div class="board" id="board"></div><div class="score-board">
+<div class="score-item">
+<div>X</div>
+<div id="score-x">0</div>
+</div><div class="score-item">
+<div>SERI</div>
+<div id="score-draw">0</div>
+</div><div class="score-item">
+<div>O</div>
+<div id="score-o">0</div>
+</div>
+</div>
+</div><div class="footer">
+Franzz Website © 2026
+</div></div><script>
+let board = Array(9).fill(null);
+let currentPlayer = 'X';
+let gameMode = 'pvp';
+let scores = { X: 0, O: 0, draw: 0 };
+let gameActive = true;
+
+const cells = [];
+const boardEl = document.getElementById('board');
+const currentPlayerEl = document.getElementById('current-player');
+
+function createBoard() {
+boardEl.innerHTML = '';
+cells.length = 0;
+
+for (let i = 0; i < 9; i++) {
+const cell = document.createElement('div');
+cell.classList.add('cell');
+cell.dataset.index = i;
+cell.addEventListener('click', handleCellClick);
+boardEl.appendChild(cell);
+cells.push(cell);
+}
+}
+
+function handleCellClick(e) {
+const index = parseInt(e.target.dataset.index);
+
+if (!gameActive || board[index]) return;
+
+makeMove(index, currentPlayer);
+}
+
+function makeMove(index, player) {
+board[index] = player;
+cells[index].textContent = player;
+cells[index].classList.add(player.toLowerCase());
+
+const winner = checkWinner();
+
+if (winner) {
+alert(winner + ' Menang!');
+scores[winner]++;
+document.getElementById('score-' + winner.toLowerCase()).textContent = scores[winner];
+gameActive = false;
+return;
+}
+
+if (!board.includes(null)) {
+alert('Seri!');
+scores.draw++;
+document.getElementById('score-draw').textContent = scores.draw;
+gameActive = false;
+return;
+}
+
+currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+currentPlayerEl.textContent = currentPlayer;
+
+if(gameMode === 'pvc' && currentPlayer === 'O') {
+setTimeout(computerMove, 400);
+}
+}
+
+function computerMove(){
+let empty = [];
+for(let i=0;i<board.length;i++){
+if(board[i]===null) empty.push(i);
+}
+
+const randomIndex = empty[Math.floor(Math.random()*empty.length)];
+if(randomIndex !== undefined){
+makeMove(randomIndex,'O');
+}
+}
+
+function checkWinner() {
+const wins = [
+[0,1,2],[3,4,5],[6,7,8],
+[0,3,6],[1,4,7],[2,5,8],
+[0,4,8],[2,4,6]
+];
+
+for (let combo of wins) {
+const [a,b,c] = combo;
+if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+return board[a];
+}
+}
+return null;
+}
+
+function resetGame(){
+board = Array(9).fill(null);
+currentPlayer = 'X';
+gameActive = true;
+currentPlayerEl.textContent = currentPlayer;
+
+cells.forEach(cell=>{
+cell.textContent='';
+cell.classList.remove('x','o');
+});
+}
+
+document.getElementById('btn-reset').onclick = resetGame;
+
+document.getElementById('btn-pvp').onclick = () => {
+gameMode = 'pvp';
+document.getElementById('btn-pvp').classList.add('btn-active');
+document.getElementById('btn-pvc').classList.remove('btn-active');
+resetGame();
+}
+
+document.getElementById('btn-pvc').onclick = () => {
+gameMode = 'pvc';
+document.getElementById('btn-pvc').classList.add('btn-active');
+document.getElementById('btn-pvp').classList.remove('btn-active');
+resetGame();
+}
+
+createBoard();
+</script></body>
+</html>
